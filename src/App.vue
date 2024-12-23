@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import type { State } from './types/type'
+import { DefaultPlaces } from './constants/places'
 
 import TheCart from './components/TheCart.vue'
 import TheHeader from './components/TheHeader.vue'
 import TheIntro from './components/TheIntro.vue'
 import DatetimeSelector from './components/DatetimeSelector.vue'
+import PlaceSelector from './components/PlaceSelector.vue'
 
 import { useFormattedDate } from './composables/useFormattedDate'
 
@@ -16,6 +18,7 @@ const hideIntro = () => (state.showIntro = false)
 const state = reactive<State>({
   showIntro: true,
   timeSelected: currentFormattedDate,
+  placeSelected: DefaultPlaces[0],
 })
 </script>
 
@@ -26,6 +29,9 @@ const state = reactive<State>({
       <TheIntro :showIntro="state.showIntro" @hideIntro="hideIntro" />
       <TheCart>
         <DatetimeSelector v-model="state.timeSelected" />
+      </TheCart>
+      <TheCart>
+        <PlaceSelector v-model="state.placeSelected" />
       </TheCart>
     </main>
   </div>
