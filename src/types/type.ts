@@ -17,3 +17,17 @@ export interface Place {
   country_code?: string
   timezone?: string
 }
+
+export interface ChartDataPoint {
+  time: Date
+  sunAltitude: number
+  moonAltitude: number
+}
+
+export interface ChartConfig {
+  xAccessor: (d: ChartDataPoint) => Date
+  sunAccessor: (d: ChartDataPoint) => number
+  moonAccessor: (d: ChartDataPoint) => number
+  xTickFormat: (d: Date) => string
+  lineAltitudes: ChartDataPoint[]
+}

@@ -6,6 +6,8 @@ import { DefaultPlaces } from './constants/places'
 import TheCart from './components/TheCart.vue'
 import TheHeader from './components/TheHeader.vue'
 import TheIntro from './components/TheIntro.vue'
+import TheChart from './components/TheChart.vue'
+import TheFooter from './components/TheFooter.vue'
 import DatetimeSelector from './components/DatetimeSelector.vue'
 import PlaceSelector from './components/PlaceSelector.vue'
 
@@ -23,7 +25,7 @@ const state = reactive<State>({
 </script>
 
 <template>
-  <div class="h-full w-full max-w-7xl m-auto grid grid-rows-wrapper-layout gap-4 p-4">
+  <div class="h-full w-full max-w-7xl m-auto grid grid-rows-wrapper-layout p-4">
     <TheHeader />
     <main>
       <TheIntro :showIntro="state.showIntro" @hideIntro="hideIntro" />
@@ -33,6 +35,10 @@ const state = reactive<State>({
       <TheCart>
         <PlaceSelector v-model="state.placeSelected" />
       </TheCart>
+      <TheCart>
+        <TheChart :datetime="state.timeSelected" :place="state.placeSelected" />
+      </TheCart>
     </main>
+    <TheFooter />
   </div>
 </template>
