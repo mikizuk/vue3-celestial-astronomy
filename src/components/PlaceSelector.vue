@@ -24,12 +24,12 @@ watch(places, (newPlaces) => {
 </script>
 
 <template>
-  <div class="flex gap-4">
+  <div class="flex flex-col md:flex-row gap-4">
     <label class="whitespace-nowrap self-center text-color-copy-primary" for="place-selector"
       >Choose place:</label
     >
     <input
-      class="w-[400px] text-color-copy-primary bg-color-background-secondary border border-color-border rounded-md p-2"
+      class="max-w-[310px] text-color-copy-primary bg-color-background-secondary border border-color-border rounded-md p-2"
       type="text"
       ref="ref-place-selector"
       v-model="queryInput"

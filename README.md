@@ -1,6 +1,8 @@
 # vue3-celestial-astronomy
 
-This template should help get you started developing with Vue 3 in Vite.
+This small app visualises the altitude of the Moon and the Sun graphically based on a place on Earth and selected time.
+
+is using two libraries
 
 ## Recommended IDE Setup
 

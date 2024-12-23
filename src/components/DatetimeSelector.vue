@@ -3,7 +3,7 @@ const timeModel = defineModel()
 </script>
 
 <template>
-  <div class="flex gap-4">
+  <div class="flex flex-col md:flex-row gap-4">
     <label class="self-center text-color-copy-primary" for="time-selector">Choose time:</label>
     <input
       class="text-color-copy-primary bg-color-background-secondary border border-color-border rounded-md p-2"
