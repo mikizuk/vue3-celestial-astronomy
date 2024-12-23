@@ -31,3 +31,13 @@ export interface ChartConfig {
   xTickFormat: (d: Date) => string
   lineAltitudes: ChartDataPoint[]
 }
+
+export interface Location {
+  latitude: number
+  longitude: number
+}
+
+export interface AltitudeData {
+  sun: { alt: number }
+  moon: { alt: number }
+}

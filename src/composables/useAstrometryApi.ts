@@ -1,18 +1,9 @@
+import type { Location, AltitudeData } from '@/types/type'
 import {
   convertEquatorialToHorizontal,
   getSolarEquatorialCoordinate,
   getLunarEquatorialCoordinate,
 } from '@observerly/astrometry'
-
-interface Location {
-  latitude: number
-  longitude: number
-}
-
-interface AltitudeData {
-  sun: { alt: number }
-  moon: { alt: number }
-}
 
 export function useAstrometryApi() {
   const calculateAltitudes = (currentTime: Date, location: Location): AltitudeData => {
