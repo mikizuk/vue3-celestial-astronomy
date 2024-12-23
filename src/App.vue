@@ -25,9 +25,9 @@ const state = reactive<State>({
 </script>
 
 <template>
-  <div class="h-full w-full max-w-7xl m-auto grid grid-rows-wrapper-layout p-4">
+  <div class="h-full w-full w-[100vw] md:max-w-7xl m-auto grid grid-rows-wrapper-layout">
     <TheHeader />
-    <main>
+    <main class="w-full max-w-[100vw] p-2">
       <TheIntro :showIntro="state.showIntro" @hideIntro="hideIntro" />
       <TheCart>
         <DatetimeSelector v-model="state.timeSelected" />

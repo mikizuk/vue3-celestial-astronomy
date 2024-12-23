@@ -65,9 +65,9 @@ watchEffect(() => {
       <UnovisChart :chartConfig="chartConfig" />
     </div>
 
-    <div class="flex justify-center gap-2 mt-2">
-      <div class="flex items-center gap-2">
-        <span>At</span>
+    <div class="flex justify-center gap-2 mt-4 mb-1">
+      <div class="md:flex items-center gap-2">
+        <span>At </span>
         <strong>{{ localDatetime }}</strong>
 
         <div class="flex items-center gap-2">
